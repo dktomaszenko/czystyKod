@@ -24,9 +24,14 @@ requirejs.config({
             exports: 'ngRoute',
             deps: ['angular']
         },
-        'app': {
+        'mainCtrl': {
             deps: ['angular']
+        },
+        'app': {
+            deps: ['angular-route', 'mainCtrl']
         }
     }
 });
+
+
 

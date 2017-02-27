@@ -4,7 +4,7 @@
 
 define(function () {
     angular
-        .module('app')
+        .module('app', [])
         .controller('mainCtrl', function () {
             var vm = this;
             vm.test = 'Hola mundo';
