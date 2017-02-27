@@ -3,9 +3,11 @@
  */
 
 
-define(function () {
+define(['angular-route'], function () {
     angular
-        .module('app', [])
+        .module('app', [
+            'ngRoute'
+        ])
         .controller('mainCtrl', function () {
             var vm = this;
             vm.test = 'Hola mundo';
