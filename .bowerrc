@@ -1,0 +1,6 @@
+{
+  "directory": "bower_components",
+  "proxy": "http://aliproxy.gfi.es:8000",
+  "https-proxy":"http://aliproxy.gfi.es:8000",
+  "strict-ssl": false 
+}
