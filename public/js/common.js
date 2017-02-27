@@ -7,16 +7,24 @@ requirejs.config({
     paths: {
         'angular': 'bower_components/angular/angular',
         'angular-ui': 'bower_components/angular-ui/build/angular-ui',
+        'angular-route': 'bower_components/angular-route/angular-route',
         'jquery': 'bower_components/jquery/dist/jquery',
 
         'app': 'public/js/app',
         'mainCtrl': 'public/js/controller-as/mainCtrl'
     },
     shim: {
-        angular: {
-            deps: ['jquery']
+        'jquery': {
+            exports: 'jquery'
         },
-        app: {
+        'angular': {
+            exports: 'angular'
+        },
+        'angular-route': {
+            exports: 'ngRoute',
+            deps: ['angular']
+        },
+        'app': {
             deps: ['angular']
         }
     }
