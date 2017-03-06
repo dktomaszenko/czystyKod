@@ -11,7 +11,7 @@ requirejs.config({
         'jquery': 'bower_components/jquery/dist/jquery',
 
         'app': 'public/js/app',
-        'mainCtrl': 'public/js/controller-as/mainCtrl'
+        'mainModule': 'public/js/controller-as/mainModule'
     },
     shim: {
         'jquery': {
@@ -24,11 +24,11 @@ requirejs.config({
             exports: 'ngRoute',
             deps: ['angular']
         },
-        'mainCtrl': {
+        'mainModule': {
             deps: ['angular']
         },
         'app': {
-            deps: ['angular-route', 'mainCtrl']
+            deps: ['angular-route', 'mainModule']
         }
     }
 });

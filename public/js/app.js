@@ -3,11 +3,8 @@
  */
 
 
-define(['angular-route'], function () {
-    angular
-        .module('app', [
-            'ngRoute'
-        ]);
+define(function () {
+    angular.module('app', ['mainModule']);
 });
 
 
