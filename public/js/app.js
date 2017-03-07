@@ -48,7 +48,7 @@ define(function () {
 
         }]);
 
-    app.run(['$rootScope', '$location', 'authService',
+/*    app.run(['$rootScope', '$location', 'authService',
         function ($rootScope, $location, authService) {
 
             //Client-side security. Server-side framework MUST add it's
@@ -63,7 +63,7 @@ define(function () {
                 }
             });
 
-        }]);
+        }]);*/
 
     return app;
 

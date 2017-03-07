@@ -15,7 +15,7 @@ define(['app'], function (app) {
             };
 
         factory.login = function (email, password) {
-            return $http.post(serviceBase + 'login', { userLogin: { userName: email, password: password } }).then(
+            return $http.post(serviceBase + 'login', {userLogin: {userName: email, password: password}}).then(
                 function (results) {
                     var loggedIn = results.data.status;
                     changeAuth(loggedIn);

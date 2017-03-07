@@ -46,7 +46,7 @@ requirejs.config({
             deps: ['angular']
         },
         'app': {
-            deps: ['routeResolver', 'angular-ui-bootstrap', 'angular-resource', 'authService']
+            deps: ['routeResolver', 'angular-ui-bootstrap', 'angular-resource']
         },
         'routeResolver': {
             deps: ['angular-route']
