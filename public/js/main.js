@@ -1,10 +1,13 @@
-/**
- * Created by usuario on 27/02/2017.
- */
+'use strict';
 
 requirejs(['./common'], function () {
-    requirejs(['app'], function () {
-        angular.bootstrap(document, ['app']);
-    });
+    requirejs([
+            'app',
+            'routeResolver'
+        ],
+        function () {
+            angular.bootstrap(document, ['app']);
+        });
 });
+
 

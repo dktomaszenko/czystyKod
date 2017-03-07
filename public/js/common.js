@@ -8,10 +8,13 @@ requirejs.config({
         'angular': 'bower_components/angular/angular',
         'angular-ui': 'bower_components/angular-ui/build/angular-ui',
         'angular-route': 'bower_components/angular-route/angular-route',
+        'angular-resource': 'bower_components/angular-resource/angular-resource',
+        'angular-animate': 'bower_components/angular-animate/angular-animate',
+        'angular-ui-bootstrap': 'bower_components/angular-bootstrap/ui-bootstrap',
         'jquery': 'bower_components/jquery/dist/jquery',
 
         'app': 'public/js/app',
-        'mainModule': 'public/js/controller-as/mainModule'
+        'routeResolver': 'public/js/services/routeResolver'
     },
     shim: {
         'jquery': {
@@ -20,18 +23,31 @@ requirejs.config({
         'angular': {
             exports: 'angular'
         },
+        'angular-animate': {
+            exports: 'angular-animate',
+            deps: ['angular']
+        },
+        'angular-ui-bootstrap': {
+            exports: 'angular-ui-bootstrap',
+            deps: ['angular-animate']
+        },
         'angular-route': {
             exports: 'ngRoute',
             deps: ['angular']
         },
-        'mainModule': {
+        'angular-resource': {
+            exports: 'angular-resource',
             deps: ['angular']
         },
         'app': {
-            deps: ['angular-route', 'mainModule']
+            deps: ['routeResolver', 'angular-ui-bootstrap', 'angular-resource']
+        },
+        'routeResolver': {
+            deps: ['angular-route']
         }
     }
 });
+
 
 
 

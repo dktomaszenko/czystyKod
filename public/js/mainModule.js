@@ -3,11 +3,10 @@
  */
 
 define(function () {
+    'use strict';
     var mainModule = angular.module('mainModule', []);
-    
     mainModule.controller('MainCtrl', function () {
         var vm = this;
         vm.test = 'Hola mundo';
     });
-
 });

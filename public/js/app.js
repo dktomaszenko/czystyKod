@@ -4,7 +4,18 @@
 
 
 define(function () {
-    angular.module('app', ['mainModule']);
+    'use strict';
+    var app = angular.module('app', ['ngRoute', 'ngResource', 'routeResolverServices', 'ngAnimate', 'ui.bootstrap']);
+
+/*    app.config(function ($routeProvider) {
+        $routeProvider
+            .when("/home",{
+                controller: './js/controller-as/mainCtrl.js',
+                templateUrl: './view/home.html',
+                resolve: resolveController('/app/controllers/customersController.js')
+            })
+            .otherwise({ redirectTo: '/home' });
+    });*/
 });
 
 
