@@ -12,9 +12,9 @@ requirejs.config({
         'angular-auth-service': 'bower_components/angular-auth-service/angular-auth-service',
         'jquery': 'bower_components/jquery/dist/jquery',
 
-        'app': 'public/js/app',
-        'routeResolver': 'public/js/services/routeResolver',
-        'authService': 'public/js/services/authService'
+        'app': 'public/app/app',
+        'routeResolver': 'public/app/services/routeResolver',
+        'authService': 'public/app/services/authService'
     },
     // external lib
     shim: {
