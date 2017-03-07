@@ -39,11 +39,10 @@ define(function () {
                 .when('/orders', route.resolve('Orders', 'orders/', 'vm'))
                 .when('/about', route.resolve('About', '', 'vm'))
                 .when('/login/:redirect*?', route.resolve('Login', '', 'vm'))
-                .otherwise({ redirectTo: '/customers' });
-
+                .otherwise({redirectTo: '/customers'});
         }]);
 
-/*    app.run(['$rootScope', '$location', 'authService',
+    app.run(['$rootScope', '$location', 'authService',
         function ($rootScope, $location, authService) {
 
             //Client-side security. Server-side framework MUST add it's
@@ -58,7 +57,7 @@ define(function () {
                 }
             });
 
-        }]);*/
+        }]);
 
     return app;
 

@@ -2,8 +2,10 @@
 
 define([], function () {
 
-    var routeResolver = function () {
+    var servicesApp = angular.module('routeResolverServices', []);
 
+    //Must be a provider since it will be injected into module.config()
+    servicesApp.provider('routeResolver', function () {
         this.$get = function () {
             return this;
         };
@@ -67,11 +69,7 @@ define([], function () {
                 resolve: resolve
             }
         }(this.routeConfig);
+    });
 
-    };
 
-    var servicesApp = angular.module('routeResolverServices', []);
-
-    //Must be a provider since it will be injected into module.config()
-    servicesApp.provider('routeResolver', routeResolver);
 });

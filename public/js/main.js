@@ -3,7 +3,8 @@
 requirejs(['./common'], function () {
     requirejs([
             'app',
-            'routeResolver'
+            'routeResolver',
+            'authService'
         ],
         function () {
             angular.bootstrap(document, ['app']);
