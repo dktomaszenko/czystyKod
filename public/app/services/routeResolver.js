@@ -2,15 +2,17 @@
 
 define([], function () {
 
-    var routeResolver = function () {
+    var servicesApp = angular.module('routeResolverServices', []);
 
+    //Must be a provider since it will be injected into module.config()
+    servicesApp.provider('routeResolver', function () {
         this.$get = function () {
             return this;
         };
 
         this.routeConfig = function () {
-            var viewsDirectory = '/public/views/',
-                controllersDirectory = '/public/js/controllers-as/',
+            var viewsDirectory = '/czysty_kod/public/app/views/',
+                controllersDirectory = '/czysty_kod/public/app/controllers-as/',
 
                 setBaseDirectories = function (viewsDir, controllersDir) {
                     viewsDirectory = viewsDir;
@@ -67,11 +69,7 @@ define([], function () {
                 resolve: resolve
             }
         }(this.routeConfig);
+    });
 
-    };
 
-    var servicesApp = angular.module('routeResolverServices', []);
-
-    //Must be a provider since it will be injected into module.config()
-    servicesApp.provider('routeResolver', routeResolver);
 });

@@ -1,6 +1,4 @@
-/**
- * Created by usuario on 27/02/2017.
- */
+'use strict';
 
 requirejs.config({
     baseUrl: '../',
@@ -14,10 +12,11 @@ requirejs.config({
         'angular-auth-service': 'bower_components/angular-auth-service/angular-auth-service',
         'jquery': 'bower_components/jquery/dist/jquery',
 
-        'app': 'public/js/app',
-        'routeResolver': 'public/js/services/routeResolver',
-        'authService': 'public/js/services/authService'
+        'app': 'public/app/app',
+        'routeResolver': 'public/app/services/routeResolver',
+        'authService': 'public/app/services/authService'
     },
+    // external lib
     shim: {
         'jquery': {
             exports: 'jquery'
@@ -45,14 +44,17 @@ requirejs.config({
             exports: 'angular-resource',
             deps: ['angular']
         },
+    // internal
+
         'app': {
-            deps: ['routeResolver', 'angular-ui-bootstrap', 'angular-resource']
+            deps: ['routeResolver', 'angular-ui-bootstrap', 'angular-resource', 'angular-auth-service']
         },
         'routeResolver': {
             deps: ['angular-route']
         },
         'authService': {
-            deps: ['angular-auth-service']
+            exports: 'authService',
+            deps: ['angular']
         }
     }
 });

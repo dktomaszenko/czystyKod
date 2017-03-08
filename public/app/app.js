@@ -1,10 +1,7 @@
-/**
- * Created by usuario on 27/02/2017.
- */
+'use strict';
 
 
 define(function () {
-    'use strict';
     var app = angular.module('app', ['ngRoute', 'ngResource', 'routeResolverServices', 'ngAnimate', 'ui.bootstrap']);
 
     app.config(['$routeProvider', 'routeResolverProvider', '$controllerProvider',
@@ -42,13 +39,10 @@ define(function () {
                 .when('/orders', route.resolve('Orders', 'orders/', 'vm'))
                 .when('/about', route.resolve('About', '', 'vm'))
                 .when('/login/:redirect*?', route.resolve('Login', '', 'vm'))
-                .otherwise({ redirectTo: '/customers' });
-
-
-
+                .otherwise({redirectTo: '/customers'});
         }]);
 
-/*    app.run(['$rootScope', '$location', 'authService',
+    app.run(['$rootScope', '$location', 'authService',
         function ($rootScope, $location, authService) {
 
             //Client-side security. Server-side framework MUST add it's
@@ -63,19 +57,10 @@ define(function () {
                 }
             });
 
-        }]);*/
+        }]);
 
     return app;
 
-    /*    app.config(function ($routeProvider) {
-     $routeProvider
-     .when("/home",{
-     controller: './js/controller-as/mainCtrl.js',
-     templateUrl: './view/home.html',
-     resolve: resolveController('/app/controllers/customersController.js')
-     })
-     .otherwise({ redirectTo: '/home' });
-     });*/
 });
 
 

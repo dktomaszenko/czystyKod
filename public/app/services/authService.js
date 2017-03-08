@@ -2,9 +2,7 @@
 
 define(['app'], function (app) {
 
-    var injectParams = ['$http', '$rootScope'];
-
-    var authFactory = function ($http, $rootScope) {
+    app.factory('authService', ['$http', '$rootScope', function ($http, $rootScope) {
         var serviceBase = '/api/dataservice/',
             factory = {
                 loginPath: '/login',
@@ -24,7 +22,7 @@ define(['app'], function (app) {
         };
 
         factory.logout = function () {
-            return $http.post(serviceBase + 'logout').then(
+            return $http.post(serviceBase + 'logout', {}).then(
                 function (results) {
                     var loggedIn = !results.data.status;
                     changeAuth(loggedIn);
@@ -42,11 +40,7 @@ define(['app'], function (app) {
         }
 
         return factory;
-    };
-
-    authFactory.$inject = injectParams;
-
-    app.factory('authService', authFactory);
+    }]);
 
 });
 
