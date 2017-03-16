@@ -11,6 +11,7 @@ requirejs.config({
         'angular-ui-bootstrap': 'bower_components/angular-bootstrap/ui-bootstrap',
         'angular-auth-service': 'bower_components/angular-auth-service/angular-auth-service',
         'angular-tweenmax': 'bower_components/angular-tweenmax/dist/angular-tweenmax',
+        'tweenmax': 'utils/requirejs_and_tweenmax/js/greensock/TweenMax',
         'jquery': 'bower_components/jquery/dist/jquery',
 
         'app': 'public/app/app',
@@ -31,9 +32,13 @@ requirejs.config({
             exports: 'angular-animate',
             deps: ['angular']
         },
-        'angular-tweenmax': {
+        'tweenmax': {
             exports: 'TweenMax',
-            deps: ['angular', 'jquery']
+            deps: ['jquery']
+        },
+        'angular-tweenmax': {
+            exports: 'angular-tweenmax',
+            deps: ['angular', 'tweenmax']
         },
         'angular-ui-bootstrap': {
             exports: 'angular-ui-bootstrap',
