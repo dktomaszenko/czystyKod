@@ -10,6 +10,7 @@ requirejs.config({
         'angular-animate': 'bower_components/angular-animate/angular-animate',
         'angular-ui-bootstrap': 'bower_components/angular-bootstrap/ui-bootstrap',
         'angular-auth-service': 'bower_components/angular-auth-service/angular-auth-service',
+        'angular-tweenmax': 'bower_components/angular-tweenmax/dist/angular-tweenmax',
         'jquery': 'bower_components/jquery/dist/jquery',
 
         'app': 'public/app/app',
@@ -30,6 +31,10 @@ requirejs.config({
             exports: 'angular-animate',
             deps: ['angular']
         },
+        'angular-tweenmax': {
+            exports: 'TweenMax',
+            deps: ['angular', 'jquery']
+        },
         'angular-ui-bootstrap': {
             exports: 'angular-ui-bootstrap',
             deps: ['angular-animate']
@@ -49,7 +54,7 @@ requirejs.config({
     // internal
 
         'app': {
-            deps: ['routeResolver', 'angular-ui-bootstrap', 'angular-resource', 'angular-auth-service']
+            deps: ['routeResolver', 'angular-ui-bootstrap', 'angular-resource', 'angular-auth-service', 'angular-tweenmax']
         },
         'routeResolver': {
             deps: ['angular-route']
