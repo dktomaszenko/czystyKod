@@ -14,7 +14,9 @@ requirejs.config({
 
         'app': 'public/app/app',
         'routeResolver': 'public/app/services/routeResolver',
-        'authService': 'public/app/services/authService'
+        'authService': 'public/app/services/authService',
+        'navbarController': 'public/app/controllers-as/navbarController',
+        'config': 'public/app/services/config'
     },
     // external lib
     shim: {
@@ -54,6 +56,14 @@ requirejs.config({
         },
         'authService': {
             exports: 'authService',
+            deps: ['angular']
+        },
+        'navbarController': {
+            exports: 'navbarController',
+            deps: ['angular']
+        },
+        'config': {
+            exports: 'config',
             deps: ['angular']
         }
     }

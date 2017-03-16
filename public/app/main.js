@@ -4,7 +4,9 @@ requirejs(['./common'], function () {
     requirejs([
             'app',
             'routeResolver',
-            'authService'
+            'authService',
+            'config',
+            'navbarController'
         ],
         function () {
             angular.bootstrap(document, ['app']);
