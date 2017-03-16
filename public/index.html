@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:ng="http://angularjs.org" on-size-changed>
+<html lang="en" xmlns:ng="http://angularjs.org" on-size-changed>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/animations.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/animations.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
     <script data-main="app/main" src="../bower_components/requirejs/require.js"></script>
     <title>Customer Manager</title>
 </head>
 <body data-ng-cloak>
-<header class="navbar navbar-inner navbar-fixed-top" data-ng-controller="NavbarController as vm">
+<header class="navbar navbar-inner navbar-fixed-top" data-ng-controller="NavbarController as vm"
+        data-ng-init="vm.init()">
     <nav class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-ng-click="vm.isCollapsed = !vm.isCollapsed">
@@ -41,6 +42,26 @@
         </div>
     </nav>
 </header>
-<div ng-view></div>
+<div class="slide-animation-container">
+    <div data-ng-view id="ng-view" class="slide-animation"></div>
+</div>
+<div id="footer">
+    <div class="navbar navbar-fixed-bottom">
+        <div class="navbar-inner footer">
+            <div class="container">
+                <footer>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Created by <a href="https://github.com/dktomaszenko" target="_blank">Darek</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-wc-overlay data-wc-overlay-delay="300">
+    <br/><img src="css/images/spinner.gif"/>
+</div>
 </body>
 </html>

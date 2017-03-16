@@ -25,6 +25,7 @@
     "angular-animate": "^1.6.2",
     "angular-bootstrap": "^2.5.0",
     "angular-resource": "^1.6.2",
-    "angular-auth-service": "^0.1.1"
+    "angular-auth-service": "^0.1.1",
+    "angular-tweenmax": "^0.0.5"
   }
 }

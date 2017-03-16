@@ -42,3 +42,17 @@ $scope.$on('scanner-started', function(event, args) {
     // do what you want to do
 });
 
+-------------------------------------------------------------------------------------
+
+Difference between $location.path(“/home”) and $location.$$path=“/home” in angularjs
+
+Code 1
+
+ $location.path("/home");
+This code is working good.No issues.
+
+Code 2
+
+$location.$$path="/home";
+This code does not working probably, because the page is redirected, but URL is shown previous URL,does not changed the redirected URL.
+
