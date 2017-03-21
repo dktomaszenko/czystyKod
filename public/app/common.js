@@ -18,7 +18,9 @@ requirejs.config({
         'routeResolver': 'public/app/services/routeResolver',
         'authService': 'public/app/services/authService',
         'navbarController': 'public/app/controllers-as/navbarController',
-        'config': 'public/app/services/config'
+        'config': 'public/app/services/config',
+        'wcOverlay': 'public/app/directives/wcOverlay',
+        'menuHighlighter': 'public/app/directives/menuHighlighter'
     },
     // external lib
     shim: {
@@ -74,6 +76,14 @@ requirejs.config({
         },
         'config': {
             exports: 'config',
+            deps: ['angular']
+        },
+        'wcOverlay': {
+            exports: 'wcOverlay',
+            deps: ['angular']
+        },
+        'menuHighlighter': {
+            exports: 'menuHighlighter',
             deps: ['angular']
         }
     }

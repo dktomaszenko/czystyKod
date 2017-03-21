@@ -6,7 +6,9 @@ requirejs(['./common'], function () {
             'routeResolver',
             'authService',
             'config',
-            'navbarController'
+            'navbarController',
+            'wcOverlay',
+            'menuHighlighter'
         ],
         function () {
             angular.bootstrap(document, ['app']);
