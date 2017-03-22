@@ -13,8 +13,7 @@ requirejs.config({
         'angular-tweenmax': 'bower_components/angular-tweenmax/dist/angular-tweenmax',
         'tweenmax': 'utils/requirejs_and_tweenmax/js/greensock/TweenMax',
         'jquery': 'bower_components/jquery/dist/jquery',
-        'breeze.client': 'bower_components/breeze-client/build/breeze.min',
-        'breeze.angular': 'bower_components/breeze-client/build/adapters/breeze.bridge.angular',
+        'breeze.debug': 'bower_components/breeze-client/build/breeze.debug',
 
         'app': 'public/app/app',
         'routeResolver': 'public/app/services/routeResolver',
@@ -29,12 +28,9 @@ requirejs.config({
         'jquery': {
             exports: 'jquery'
         },
-        'breeze.client': {
-            exports: 'breeze.client'
-        },
-        'breeze.angular': {
-            exports: 'breeze.angular',
-            deps: ['breeze.client', 'angular']
+        'breeze.debug': {
+            exports: 'breeze.debug',
+            deps: ['angular']
         },
         'angular': {
             exports: 'angular'
@@ -70,7 +66,7 @@ requirejs.config({
     // internal
 
         'app': {
-            deps: ['routeResolver', 'angular-ui-bootstrap', 'angular-resource', 'angular-auth-service', 'angular-tweenmax', 'breeze.angular']
+            deps: ['routeResolver', 'angular-ui-bootstrap', 'angular-resource', 'angular-auth-service', 'angular-tweenmax', 'breeze.debug']
         },
         'routeResolver': {
             deps: ['angular-route']

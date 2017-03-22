@@ -2,7 +2,7 @@
 
 
 define(function () {
-    var app = angular.module('app', ['ngRoute', 'ngResource', 'routeResolverServices','wc.directives', 'ngAnimate', 'ui.bootstrap']);
+    var app = angular.module('app', ['ngRoute', 'ngResource', 'routeResolverServices','wc.directives', 'ngAnimate', 'ui.bootstrap', 'breeze.debug']);
 
     app.config(['$routeProvider', 'routeResolverProvider', '$controllerProvider',
         '$compileProvider', '$filterProvider', '$provide', '$httpProvider',
