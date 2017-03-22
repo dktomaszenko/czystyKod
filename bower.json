@@ -26,6 +26,8 @@
     "angular-bootstrap": "^2.5.0",
     "angular-resource": "^1.6.2",
     "angular-auth-service": "^0.1.1",
-    "angular-tweenmax": "^0.0.5"
+    "angular-tweenmax": "^0.0.5",
+    "breeze-client": "^1.6.3",
+    "breeze-client-labs": "^1.5.11"
   }
 }

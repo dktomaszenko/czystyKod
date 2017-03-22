@@ -52,7 +52,7 @@
             },
             link: link
         }
-    }
+    };
 
     menuHighlighter.$inject = injectParams;
 
